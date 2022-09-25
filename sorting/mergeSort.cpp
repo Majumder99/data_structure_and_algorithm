@@ -50,7 +50,6 @@ void merge(int arr[], int p, int q, int r) {
     k++;
   }
 }
-
 // Divide the array into two subarrays, sort them and merge them
 void mergeSort(int arr[], int l, int r) {
   if (l < r) {
@@ -65,21 +64,20 @@ void mergeSort(int arr[], int l, int r) {
   }
 }
 
-// Print the array
-void printArray(int arr[], int size) {
-  for (int i = 0; i < size; i++)
-    cout << arr[i] << " ";
-  cout << endl;
-}
-
-// Driver program
 int main() {
-  int arr[] = {6, 5, 12, 10, 9, 1};
-  int size = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    cin >> n;
+    int a[n+100];
+    for (int i = 0; i < n ; i++){
+        cin >> a[i];
+    }
 
-  mergeSort(arr, 0, size - 1);
+    mergeSort(a, 0, n-1);
 
-  cout << "Sorted array: \n";
-  printArray(arr, size);
-  return 0;
+    cout << "Sorted array: \n";
+    for (int i = 0; i < n ; i++){
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    return 0;
 }
