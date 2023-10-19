@@ -17,7 +17,7 @@ public:
         {
             pq.emplace(i, 0);
         }
-
+k
         while (k-- > 0 && !pq.empty())
         {
             auto curr = pq.top();
